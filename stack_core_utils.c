@@ -16,6 +16,17 @@ int isEmpty(t_list *stack)
 	return (stack == NULL);
 }
 
+void pop(t_list **stack)
+{
+	t_list *temp;
+
+	if (!(*stack))
+		return ;
+	temp = (*stack)->next;
+	free(*stack);
+	*stack = temp;
+}
+
 void push(t_list **stack, int num)
 {
 	t_list *new_node;
@@ -28,16 +39,6 @@ void push(t_list **stack, int num)
 	*stack = new_node;
 }
 
-void pop(t_list **stack)
-{
-	t_list *temp;
-
-	if (!(*stack))
-		return ;
-	temp = (*stack)->next;
-	free(*stack);
-	*stack = temp;
-}
 //
 // t_list *getlast(t_list *stack)
 // {
