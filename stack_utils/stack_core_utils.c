@@ -9,7 +9,7 @@
 /*   Updated: 2025/02/24 16:42:47 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
 int isEmpty(t_list *stack)
 {

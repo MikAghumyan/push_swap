@@ -13,7 +13,7 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "./printf/ft_printf.h"
+# include "../printf/ft_printf.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -25,6 +25,7 @@ typedef struct s_list
 }					t_list;
 
 void				ft_putstr(char *str);
+int					ft_atolli(const char *nptr);
 
 int					isEmpty(t_list *stack);
 void				push(t_list **stack, int num);

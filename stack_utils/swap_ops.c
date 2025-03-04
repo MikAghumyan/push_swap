@@ -1,43 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rrotate_ops.c                                      :+:      :+:    :+:   */
+/*   swap_ops.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/02/26 17:45:06 by maghumya          #+#    #+#             */
-/*   Updated: 2025/02/26 17:53:03 by maghumya         ###   ########.fr       */
+/*   Created: 2025/02/25 18:31:05 by maghumya          #+#    #+#             */
+/*   Updated: 2025/02/25 18:52:09 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "push_swap.h"
+#include "../includes/push_swap.h"
 
-void rrotate(t_list **stack)
+void swap(t_list **stack)
 {
-	t_list *prelast;
+	int temp;
+
 	if (!*stack || !(*stack)->next)
 		return ;
-	prelast = getprelast(*stack);
-	prelast->next->next = (*stack);
-	(*stack) = prelast->next;
-	prelast->next = NULL;
+	temp = (*stack)->data;
+	(*stack)->data = (*stack)->next->data;
+	(*stack)->next->data = temp;
 }
 
-void	rra(t_list **a)
+void sa(t_list **a)
 {
-	rrotate(a);
-	ft_printf("rra\n");
+	swap(a);
+	ft_printf("sa\n");
 }
 
-void	rrb(t_list **b)
+void sb(t_list **b)
 {
-	rrotate(b);
-	ft_printf("rrb\n");
+	swap(b);
+	ft_printf("sb\n");
 }
 
-void	rrr(t_list **a, t_list **b)
+void ss(t_list **a, t_list **b)
 {
-	rrotate(a);
-	rrotate(b);
-	ft_printf("rrr\n");
+	swap(a);
+	swap(b);
+	ft_printf("ss\n");
 }

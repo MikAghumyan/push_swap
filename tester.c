@@ -1,4 +1,4 @@
-#include "push_swap.h"
+#include "includes/push_swap.h"
 
 void	print_stack(t_list *temp)
 {
@@ -85,6 +85,15 @@ int	main(void)
 	rrr(&a, &b);
 	print_stack(a);
 	print_stack(b);
+
+	printf("%d \t", ft_atolli("0"));
+	printf("%d \t", ft_atolli("9"));
+	printf("%d \t", ft_atolli("9999999"));
+	printf("%d \t", ft_atolli("2147483647"));
+	printf("%d \t", ft_atolli("999999999999999999999"));
+	printf("%d \t", ft_atolli("-9999999"));
+	printf("%d \t", ft_atolli("-2147483648"));
+	printf("%d \t", ft_atolli("-999999999999999999999"));
 
 	return (0);
 }
