@@ -13,38 +13,38 @@
 #ifndef PUSH_SWAP_H
 # define PUSH_SWAP_H
 
-# include "../printf/ft_printf.h"
+# include "../libft/libft.h"
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
 
-typedef struct s_list
+typedef struct s_stack_node
 {
 	int				data;
-	struct s_list	*next;
-}					t_list;
+	struct s_stack_node	*next;
+}					t_stack;
 
 void				ft_putstr(char *str);
 int					ft_atolli(const char *nptr);
 
-int					isEmpty(t_list *stack);
-void				push(t_list **stack, int num);
-void				pop(t_list **stack);
-void				swap(t_list **stack);
-// t_list *getlast(t_list *stack);
-t_list				*getprelast(t_list *stack);
-void				rotate(t_list **stack);
-void				rrotate(t_list **stack);
-void				pa(t_list **a, t_list **b);
-void				pb(t_list **b, t_list **a);
-void				ra(t_list **a);
-void				rb(t_list **b);
-void				rr(t_list **a, t_list **b);
-void				rra(t_list **a);
-void				rrb(t_list **b);
-void				rrr(t_list **a, t_list **b);
-void				sa(t_list **a);
-void				sb(t_list **b);
-void				ss(t_list **a, t_list **b);
+int					isEmpty(t_stack *stack);
+void				push(t_stack **stack, int num);
+void				pop(t_stack **stack);
+void				swap(t_stack **stack);
+// t_stack *getlast(t_stack *stack);
+t_stack				*getprelast(t_stack *stack);
+void				rotate(t_stack **stack);
+void				rrotate(t_stack **stack);
+void				pa(t_stack **a, t_stack **b);
+void				pb(t_stack **b, t_stack **a);
+void				ra(t_stack **a);
+void				rb(t_stack **b);
+void				rr(t_stack **a, t_stack **b);
+void				rra(t_stack **a);
+void				rrb(t_stack **b);
+void				rrr(t_stack **a, t_stack **b);
+void				sa(t_stack **a);
+void				sb(t_stack **b);
+void				ss(t_stack **a, t_stack **b);
 
 #endif

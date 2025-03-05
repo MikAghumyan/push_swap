@@ -10,9 +10,9 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-void pa(t_list **a, t_list **b)
+void pa(t_stack **a, t_stack **b)
 {
 	if (!(isEmpty(*b)))
 	{
@@ -22,7 +22,7 @@ void pa(t_list **a, t_list **b)
 	}
 }
 
-void pb(t_list **b, t_list **a)
+void pb(t_stack **b, t_stack **a)
 {
 	if (!(isEmpty(*a)))
 	{

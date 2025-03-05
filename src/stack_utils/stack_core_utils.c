@@ -9,16 +9,16 @@
 /*   Updated: 2025/02/24 16:42:47 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-int isEmpty(t_list *stack)
+int isEmpty(t_stack *stack)
 {
 	return (stack == NULL);
 }
 
-void pop(t_list **stack)
+void pop(t_stack **stack)
 {
-	t_list *temp;
+	t_stack *temp;
 
 	if (!(*stack))
 		return ;
@@ -27,11 +27,11 @@ void pop(t_list **stack)
 	*stack = temp;
 }
 
-void push(t_list **stack, int num)
+void push(t_stack **stack, int num)
 {
-	t_list *new_node;
+	t_stack *new_node;
 
-	new_node = malloc(sizeof(t_list));
+	new_node = malloc(sizeof(t_stack));
 	if (!new_node)
 		return ;
 	new_node->data = num;
@@ -40,9 +40,9 @@ void push(t_list **stack, int num)
 }
 
 //
-// t_list *getlast(t_list *stack)
+// t_stack *getlast(t_stack *stack)
 // {
-// 	t_list *tmp;
+// 	t_stack *tmp;
 //
 // 	if(!stack)
 // 		return (NULL);
@@ -52,9 +52,9 @@ void push(t_list **stack, int num)
 // 	return (tmp);
 // }
 
-t_list *getprelast(t_list *stack)
+t_stack *getprelast(t_stack *stack)
 {
-	t_list *tmp;
+	t_stack *tmp;
 
 	if(!stack)
 		return (NULL);

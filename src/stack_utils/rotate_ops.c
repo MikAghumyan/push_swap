@@ -1,43 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   rrotate_ops.c                                      :+:      :+:    :+:   */
+/*   rotate_ops.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 17:45:06 by maghumya          #+#    #+#             */
-/*   Updated: 2025/02/26 17:53:03 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/02/26 17:51:21 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/push_swap.h"
+#include "../../includes/push_swap.h"
 
-void rrotate(t_list **stack)
+void rotate(t_stack **stack)
 {
-	t_list *prelast;
+	t_stack  *temp;
+	t_stack	*last;
+
 	if (!*stack || !(*stack)->next)
 		return ;
-	prelast = getprelast(*stack);
-	prelast->next->next = (*stack);
-	(*stack) = prelast->next;
-	prelast->next = NULL;
+	temp = (*stack)->next;
+	last = getprelast(*stack)->next;
+	last->next = (*stack);
+	(*stack)->next = NULL;
+	*stack = temp;
 }
 
-void	rra(t_list **a)
+void ra(t_stack **a)
 {
-	rrotate(a);
-	ft_printf("rra\n");
+	rotate(a);
+	ft_printf("ra\n");
 }
 
-void	rrb(t_list **b)
+void rb(t_stack **b)
 {
-	rrotate(b);
-	ft_printf("rrb\n");
+	rotate(b);
+	ft_printf("rb\n");
 }
 
-void	rrr(t_list **a, t_list **b)
+void rr(t_stack **a, t_stack **b)
 {
-	rrotate(a);
-	rrotate(b);
-	ft_printf("rrr\n");
+	rotate(a);
+	rotate(b);
+	ft_printf("rr\n");
 }
