@@ -6,22 +6,26 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 17:55:12 by maghumya          #+#    #+#             */
-/*   Updated: 2025/02/25 18:08:49 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/05 21:35:08 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-void	ft_putstr(char *str)
+void	print_stack(t_stack *temp)
 {
-	while (*str)
-		write(1, str++, 1);
+	while (temp)
+	{
+		printf("%d ", temp->data);
+		temp = temp->next;
+	}
+	printf("\n");
 }
 
 int	ft_atolli(const char *nptr)
 {
-	int	i;
-	int	sign;
+	int		i;
+	int		sign;
 	int64_t	result;
 
 	i = 0;
@@ -36,7 +40,7 @@ int	ft_atolli(const char *nptr)
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		result = result * 10 + nptr[i] - '0';
-		if(result * sign > INT_MAX || result * sign < INT_MIN)
+		if (result * sign > INT_MAX || result * sign < INT_MIN)
 			return (0);
 		i++;
 	}
