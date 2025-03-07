@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:15:19 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/05 21:35:27 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/07 16:03:07 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,17 @@ typedef struct s_stack_node
 }						t_stack;
 
 void					print_stack(t_stack *temp);
-int						ft_atolli(const char *nptr);
-void					get_stack(int argc, char **argv);
-char					**parse_int(int argc, char **argv, int *is_allocated);
+int						ft_atoi_valid(const char *nptr);
+
+char					**parse_args(int argc, char **argv, int *is_allocated);
+int						dup_checker(t_stack *stack, int num);
+void					fill_stack(char **args, t_stack **new_stack);
+t_stack					*get_stack(int argc, char **argv);
 
 int						isEmpty(t_stack *stack);
 void					push(t_stack **stack, int num);
 void					pop(t_stack **stack);
+void					free_stack(t_stack **stack);
 void					swap(t_stack **stack);
 // t_stack *getlast(t_stack *stack);
 t_stack					*getprelast(t_stack *stack);

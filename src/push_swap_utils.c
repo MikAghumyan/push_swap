@@ -22,7 +22,7 @@ void	print_stack(t_stack *temp)
 	printf("\n");
 }
 
-int	ft_atolli(const char *nptr)
+int	ft_atoi_valid(const char *nptr)
 {
 	int		i;
 	int		sign;

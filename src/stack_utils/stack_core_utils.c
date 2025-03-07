@@ -39,6 +39,12 @@ void push(t_stack **stack, int num)
 	*stack = new_node;
 }
 
+void free_stack(t_stack **stack)
+{
+	while (*stack)
+		pop(stack);
+}
+
 //
 // t_stack *getlast(t_stack *stack)
 // {

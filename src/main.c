@@ -14,6 +14,14 @@
 
 int	main(int argc, char **argv)
 {
-	get_stack(argc, argv);
+	t_stack *stack_a;
+
+	stack_a = get_stack(argc, argv);
+	if(!stack_a)
+	{
+		ft_putstr_fd("ERROR \n", 2);
+		exit(0);
+	}
+	print_stack(stack_a);
 	return (0);
 }

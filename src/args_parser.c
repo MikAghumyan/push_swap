@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:24:31 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/05 21:36:04 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/05 21:45:42 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ char	**parse_args(int argc, char **argv, int *is_allocated)
 	if (argc == 2)
 	{
 		args = ft_split(argv[1], ' ');
+		if (!args)
+			return (NULL);
 		*(is_allocated) = 1;
 	}
 	else
@@ -45,24 +47,50 @@ char	**parse_args(int argc, char **argv, int *is_allocated)
 	return (args);
 }
 
-void	get_stack(int argc, char **argv)
+int dup_checker(t_stack *stack, int num)
 {
-	ssize_t	i;
-	char	**args;
-	int		is_allocated;
-	t_stack	*top;
+	while(stack)
+	{
+		if(stack->data == num)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
+}
 
-	is_allocated = 0;
-	args = parse_args(argc, argv, &is_allocated);
+void fill_stack(char **args, t_stack **new_stack)
+{
+	ssize_t i;
+	int new_nb;
+
 	i = 0;
 	while (args[i + 1])
 		i++;
 	while (i >= 0)
 	{
-		push(&top, ft_atolli(args[i]));
-		i--;
+		new_nb = ft_atoi_valid(args[i]);
+		if (!new_nb || !dup_checker(*new_stack, new_nb))
+		{
+			free_stack(new_stack);
+			return ;
+		}
+		push(new_stack, new_nb);
+		--i;
 	}
-	print_stack(top);
+}
+
+t_stack	*get_stack(int argc, char **argv)
+{
+	char	**args;
+	int		is_allocated;
+	t_stack	*new_stack;
+
+	new_stack = NULL;
+	is_allocated = 0;
+	args = parse_args(argc, argv, &is_allocated);
+	if (!args)
+		return (NULL);
+	fill_stack(args, &new_stack);
 	free_args(args, &is_allocated);
-	ft_printf("\n");
+	return (new_stack);
 }
