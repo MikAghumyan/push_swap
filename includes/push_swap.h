@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:15:19 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/07 16:03:07 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/10 05:18:58 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
+# include <stdint.h>
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
@@ -25,11 +26,15 @@ typedef struct s_stack_node
 }						t_stack;
 
 void					print_stack(t_stack *temp);
-int						ft_atoi_valid(const char *nptr);
-
+int						ft_atoi_valid(char **args, ssize_t args_i,
+							int *is_allocated, t_stack **stack);
+void					ft_error(char **args, int *is_allocated,
+							t_stack **stack);
+void					free_args(char **args, int *is_allocated);
 char					**parse_args(int argc, char **argv, int *is_allocated);
 int						dup_checker(t_stack *stack, int num);
-void					fill_stack(char **args, t_stack **new_stack);
+void					fill_stack(char **args, int *is_allocated,
+							t_stack **new_stack);
 t_stack					*get_stack(int argc, char **argv);
 
 int						isEmpty(t_stack *stack);
