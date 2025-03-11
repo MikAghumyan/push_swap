@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 16:45:45 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 23:25:58 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/11 23:48:49 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,8 @@ size_t	get_max_position(t_stack *stack)
 
 	i = 0;
 	max = get_stack_size(stack) - 1;
-	ft_printf("max: %d\n", max);
 	while (stack)
 	{
-		ft_printf("stack->index: %d\n", stack->index);
 		if (stack->index == max)
 			return (i);
 		i++;

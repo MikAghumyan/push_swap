@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:09:13 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 23:29:35 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/11 23:50:56 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,6 @@ void	make_butterfly(t_stack **a, t_stack **b)
 		}
 		else
 			ra(a);
-		ft_printf("a: \n");
-		print_stack(*a);
-		ft_printf("b: \n");
-		print_stack(*b);
 	}
 }
 
@@ -48,8 +44,6 @@ void	push_back(t_stack **a, t_stack **b)
 	while (*b)
 	{
 		max_position = get_max_position(*b);
-		ft_printf("max_position: %ld\n", max_position);
-		print_stack(*b);
 		if (max_position < get_stack_size(*b) / 2)
 			while (max_position--)
 				rb(b);
