@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:20:59 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 23:28:43 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 00:26:05 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,9 @@ void	push(t_stack **stack, int num, size_t index)
 
 void	free_stack(t_stack **stack)
 {
-	while (*stack)
+	if (!stack)
+		return ;
+	while (!is_empty(*stack))
 		pop(stack);
 }
 

@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:24:31 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 18:57:26 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 00:23:39 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	free_args(char **args, int *is_allocated)
 	size_t	i;
 
 	i = 0;
+	if (!args || !is_allocated)
+		return ;
 	if (*is_allocated)
 	{
 		i = 0;
