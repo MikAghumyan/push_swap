@@ -1,30 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   sorter_utils.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/03/04 21:46:52 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 19:04:50 by maghumya         ###   ########.fr       */
+/*   Created: 2025/03/11 16:45:45 by maghumya          #+#    #+#             */
+/*   Updated: 2025/03/11 17:12:36 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../includes/push_swap.h"
 
-int	main(int argc, char **argv)
+size_t	get_stack_size(t_stack *stack)
 {
-	t_stack	*stack_a;
-	t_stack	*stack_b;
+	size_t	size;
 
-	stack_b = NULL;
-	stack_a = get_stack(argc, argv);
-	if (!stack_a)
-		ft_error(NULL, NULL, NULL);
-	get_indexes(stack_a);
-	print_stack(stack_a);
-	sort_stack(&stack_a, &stack_b);
-	print_stack(stack_a);
-	free_stack(&stack_a);
+	size = 0;
+	while (stack)
+	{
+		size++;
+		stack = stack->next;
+	}
+	return (size);
+}
+
+size_t	get_max_position(t_stack *stack)
+{
+	size_t max;
+	size_t i;
+
+	i = 0;
+	max = get_stack_size(stack) - 1;
+	ft_printf("max: %d\n", max);
+	while (stack)
+	{
+		ft_printf("stack->index: %d\n", stack->index);
+		if (stack->index == max)
+			return (i);
+		i++;
+		stack = stack->next;
+	}
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:15:19 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 14:07:25 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/11 19:01:52 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,12 @@ int						dup_checker(t_stack *stack, int num);
 void					fill_stack(char **args, int *is_allocated,
 							t_stack **new_stack);
 t_stack					*get_stack(int argc, char **argv);
+
+void					sort_stack(t_stack **a, t_stack **b);
+void					make_butterfly(t_stack **a, t_stack **b);
+
+size_t					get_stack_size(t_stack *stack);
+size_t					get_max_position(t_stack *stack);
 
 int						isEmpty(t_stack *stack);
 void					push(t_stack **stack, int num, size_t index);

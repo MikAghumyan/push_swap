@@ -14,6 +14,8 @@ MAIN_SRC=$(SRC_DIR)/main.c
 TESTER_SRC=tester.c
 SRC=$(SRC_DIR)/push_swap_utils.c \
 		$(SRC_DIR)/args_parser.c \
+		$(SRC_DIR)/sorter.c \
+		$(SRC_DIR)/sorter_utils.c \
 
 STACK_UTILS_SRC= $(STACK_UTILS_SRC_DIR)/stack_core_utils.c \
 				$(STACK_UTILS_SRC_DIR)/push_ops.c \
