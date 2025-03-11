@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 17:55:12 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 14:07:16 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/11 14:25:08 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,8 @@ int	ft_atoi_valid(char **args, ssize_t args_i, int *is_allocated,
 		sign = -1;
 	if (nptr[i] == '-' || nptr[i] == '+')
 		i++;
+	if (nptr[i] < '0' || nptr[i] > '9')
+		ft_error(args, is_allocated, stack);
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		result = result * 10 + nptr[i] - '0';
