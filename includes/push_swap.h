@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:15:19 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/10 05:18:58 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/11 14:07:25 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@
 typedef struct s_stack_node
 {
 	int					data;
+	size_t				index;
 	struct s_stack_node	*next;
 }						t_stack;
 
@@ -30,6 +31,8 @@ int						ft_atoi_valid(char **args, ssize_t args_i,
 							int *is_allocated, t_stack **stack);
 void					ft_error(char **args, int *is_allocated,
 							t_stack **stack);
+void					get_indexes(t_stack *stack);
+
 void					free_args(char **args, int *is_allocated);
 char					**parse_args(int argc, char **argv, int *is_allocated);
 int						dup_checker(t_stack *stack, int num);
