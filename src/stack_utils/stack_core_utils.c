@@ -6,13 +6,13 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:20:59 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 17:15:59 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/11 23:28:43 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-int	isEmpty(t_stack *stack)
+int	is_empty(t_stack *stack)
 {
 	return (stack == NULL);
 }

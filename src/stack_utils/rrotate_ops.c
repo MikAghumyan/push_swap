@@ -6,15 +6,16 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 17:45:06 by maghumya          #+#    #+#             */
-/*   Updated: 2025/02/26 17:53:03 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/11 23:27:36 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/push_swap.h"
 
-void rrotate(t_stack **stack)
+void	rrotate(t_stack **stack)
 {
-	t_stack *prelast;
+	t_stack	*prelast;
+
 	if (!*stack || !(*stack)->next)
 		return ;
 	prelast = getprelast(*stack);

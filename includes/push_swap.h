@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:15:19 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 19:01:52 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/11 23:28:42 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,8 @@
 # define PUSH_SWAP_H
 
 # include "../libft/libft.h"
+# include <stdbool.h>
 # include <stdint.h>
-# include <stdio.h>
-# include <stdlib.h>
-# include <unistd.h>
 
 typedef struct s_stack_node
 {
@@ -46,7 +44,7 @@ void					make_butterfly(t_stack **a, t_stack **b);
 size_t					get_stack_size(t_stack *stack);
 size_t					get_max_position(t_stack *stack);
 
-int						isEmpty(t_stack *stack);
+int						is_empty(t_stack *stack);
 void					push(t_stack **stack, int num, size_t index);
 void					pop(t_stack **stack);
 void					free_stack(t_stack **stack);

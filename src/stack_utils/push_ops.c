@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/25 18:52:22 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 18:57:57 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/11 23:28:43 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	pa(t_stack **a, t_stack **b)
 {
-	if (!(isEmpty(*b)))
+	if (!(is_empty(*b)))
 	{
 		push(a, (*b)->data, (*b)->index);
 		pop(b);
@@ -24,7 +24,7 @@ void	pa(t_stack **a, t_stack **b)
 
 void	pb(t_stack **b, t_stack **a)
 {
-	if (!(isEmpty(*a)))
+	if (!(is_empty(*a)))
 	{
 		push(b, (*a)->data, (*a)->index);
 		pop(a);

@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:09:13 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 17:09:11 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/11 23:29:35 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ void	push_back(t_stack **a, t_stack **b)
 	while (*b)
 	{
 		max_position = get_max_position(*b);
-		printf("max_position: %ld\n", max_position);
+		ft_printf("max_position: %ld\n", max_position);
 		print_stack(*b);
 		if (max_position < get_stack_size(*b) / 2)
 			while (max_position--)
@@ -57,10 +57,6 @@ void	push_back(t_stack **a, t_stack **b)
 			while (max_position++ < get_stack_size(*b))
 				rrb(b);
 		pa(a, b);
-		// ft_printf("a: \n");
-		// print_stack(*a);
-		// ft_printf("b: \n");
-		// print_stack(*b);
 	}
 }
 
