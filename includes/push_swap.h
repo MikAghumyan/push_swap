@@ -41,7 +41,7 @@ void					fill_stack(char **args, int *is_allocated,
 t_stack					*get_stack(int argc, char **argv);
 
 int						isEmpty(t_stack *stack);
-void					push(t_stack **stack, int num);
+void					push(t_stack **stack, int num, size_t index);
 void					pop(t_stack **stack);
 void					free_stack(t_stack **stack);
 void					swap(t_stack **stack);
