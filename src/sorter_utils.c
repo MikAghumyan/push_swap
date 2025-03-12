@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 16:45:45 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 23:48:49 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 12:28:09 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,4 +40,14 @@ size_t	get_max_position(t_stack *stack)
 		stack = stack->next;
 	}
 	return (0);
+}
+
+size_t	get_sqrt(size_t n)
+{
+	size_t	i;
+
+	i = 0;
+	while (i * i < n)
+		i++;
+	return (i);
 }

@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:09:13 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 23:50:56 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 12:22:30 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	make_butterfly(t_stack **a, t_stack **b)
 	size_t	offset;
 
 	pivot = 0;
-	offset = 1;
+	offset = get_sqrt(get_stack_size(*a));
 	while (*a)
 	{
 		if ((*a)->index <= pivot)
@@ -30,7 +30,7 @@ void	make_butterfly(t_stack **a, t_stack **b)
 		else if ((*a)->index <= pivot + offset)
 		{
 			pb(b, a);
-			offset++;
+			pivot++;
 		}
 		else
 			ra(a);
@@ -44,7 +44,7 @@ void	push_back(t_stack **a, t_stack **b)
 	while (*b)
 	{
 		max_position = get_max_position(*b);
-		if (max_position < get_stack_size(*b) / 2)
+		if (max_position <= get_stack_size(*b) / 2)
 			while (max_position--)
 				rb(b);
 		else

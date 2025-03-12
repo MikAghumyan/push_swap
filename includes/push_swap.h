@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:15:19 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 23:28:42 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 12:13:25 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ void					make_butterfly(t_stack **a, t_stack **b);
 
 size_t					get_stack_size(t_stack *stack);
 size_t					get_max_position(t_stack *stack);
+size_t					get_sqrt(size_t n);
 
 int						is_empty(t_stack *stack);
 void					push(t_stack **stack, int num, size_t index);
