@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/11 15:09:13 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/12 12:22:30 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 13:25:33 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,4 +58,15 @@ void	sort_stack(t_stack **a, t_stack **b)
 {
 	make_butterfly(a, b);
 	push_back(a, b);
+}
+
+int	is_sorted(t_stack *stack)
+{
+	while (stack->next)
+	{
+		if (stack->data > stack->next->data)
+			return (0);
+		stack = stack->next;
+	}
+	return (1);
 }

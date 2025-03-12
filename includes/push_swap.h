@@ -44,6 +44,7 @@ void					make_butterfly(t_stack **a, t_stack **b);
 size_t					get_stack_size(t_stack *stack);
 size_t					get_max_position(t_stack *stack);
 size_t					get_sqrt(size_t n);
+int						is_sorted(t_stack *stack);
 
 int						is_empty(t_stack *stack);
 void					push(t_stack **stack, int num, size_t index);
