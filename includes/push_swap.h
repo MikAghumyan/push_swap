@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:15:19 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/12 12:13:25 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 14:37:44 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void					print_stack(t_stack *temp);
 int						ft_atoi_valid(char **args, ssize_t args_i,
 							int *is_allocated, t_stack **stack);
 void					ft_error(char **args, int *is_allocated,
-							t_stack **stack);
+							t_stack **stack_a, t_stack **stack_b);
 void					get_indexes(t_stack *stack);
 
 void					free_args(char **args, int *is_allocated);

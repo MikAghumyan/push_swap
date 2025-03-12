@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/04 21:46:52 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/12 12:28:18 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 14:35:32 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ int	main(int argc, char **argv)
 	stack_b = NULL;
 	stack_a = get_stack(argc, argv);
 	if (!stack_a)
-		ft_error(NULL, NULL, NULL);
+		ft_error(NULL, NULL, NULL, NULL);
 	get_indexes(stack_a);
 	sort_stack(&stack_a, &stack_b);
 	free_stack(&stack_a);

@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:24:31 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/12 00:23:39 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 14:33:37 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -71,7 +71,7 @@ void	fill_stack(char **args, int *is_allocated, t_stack **new_stack)
 	{
 		new_nb = ft_atoi_valid(args, i, is_allocated, new_stack);
 		if (!dup_checker(*new_stack, new_nb))
-			ft_error(args, is_allocated, new_stack);
+			ft_error(args, is_allocated, new_stack, NULL);
 		push(new_stack, new_nb, 0);
 		--i;
 	}
