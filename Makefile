@@ -18,7 +18,7 @@ SRC=$(SRC_DIR)/push_swap_utils.c \
 		$(SRC_DIR)/sorter.c \
 		$(SRC_DIR)/sorter_utils.c
 
-CHECKER_SRC=$(SRC_DIR)/checker.c
+CHECKER_SRC=$(SRC_DIR)/checker_bonus.c
 
 GNL_SRC=$(GNL_DIR)/get_next_line.c \
 		$(GNL_DIR)/get_next_line_utils.c

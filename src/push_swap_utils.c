@@ -72,8 +72,6 @@ int	ft_atoi_valid(char **args, ssize_t args_i, int *is_allocated,
 		sign = -1;
 	if (nptr[i] == '-' || nptr[i] == '+')
 		i++;
-	if (nptr[i] < '0' || nptr[i] > '9')
-		ft_error(args, is_allocated, stack, NULL);
 	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
 		result = result * 10 + nptr[i] - '0';
@@ -81,5 +79,7 @@ int	ft_atoi_valid(char **args, ssize_t args_i, int *is_allocated,
 			ft_error(args, is_allocated, stack, NULL);
 		i++;
 	}
+	if (nptr[i] && (nptr[i] < '0' || nptr[i] > '9'))
+		ft_error(args, is_allocated, stack, NULL);
 	return (result * sign);
 }
