@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/26 17:45:06 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/11 23:27:19 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 22:50:20 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,21 +26,24 @@ void	rotate(t_stack **stack)
 	*stack = temp;
 }
 
-void	ra(t_stack **a)
+void	ra(t_stack **a, bool print)
 {
 	rotate(a);
-	ft_printf("ra\n");
+	if (print)
+		ft_printf("ra\n");
 }
 
-void	rb(t_stack **b)
+void	rb(t_stack **b, bool print)
 {
 	rotate(b);
-	ft_printf("rb\n");
+	if (print)
+		ft_printf("rb\n");
 }
 
-void	rr(t_stack **a, t_stack **b)
+void	rr(t_stack **a, t_stack **b, bool print)
 {
 	rotate(a);
 	rotate(b);
-	ft_printf("rr\n");
+	if (print)
+		ft_printf("rr\n");
 }

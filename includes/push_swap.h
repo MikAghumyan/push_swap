@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:15:19 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/12 14:37:44 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/12 22:51:20 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,16 +55,16 @@ void					swap(t_stack **stack);
 t_stack					*getprelast(t_stack *stack);
 void					rotate(t_stack **stack);
 void					rrotate(t_stack **stack);
-void					pa(t_stack **a, t_stack **b);
-void					pb(t_stack **b, t_stack **a);
-void					ra(t_stack **a);
-void					rb(t_stack **b);
-void					rr(t_stack **a, t_stack **b);
-void					rra(t_stack **a);
-void					rrb(t_stack **b);
-void					rrr(t_stack **a, t_stack **b);
-void					sa(t_stack **a);
-void					sb(t_stack **b);
-void					ss(t_stack **a, t_stack **b);
+void					pa(t_stack **a, t_stack **b, bool print);
+void					pb(t_stack **b, t_stack **a, bool print);
+void					ra(t_stack **a, bool print);
+void					rb(t_stack **b, bool print);
+void					rr(t_stack **a, t_stack **b, bool print);
+void					rra(t_stack **a, bool print);
+void					rrb(t_stack **b, bool print);
+void					rrr(t_stack **a, t_stack **b, bool print);
+void					sa(t_stack **a, bool print);
+void					sb(t_stack **b, bool print);
+void					ss(t_stack **a, t_stack **b, bool print);
 
 #endif
