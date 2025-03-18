@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/02/24 14:15:19 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/12 22:51:20 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/18 16:48:14 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,14 @@ t_stack					*get_stack(int argc, char **argv);
 void					sort_stack(t_stack **a, t_stack **b);
 void					make_butterfly(t_stack **a, t_stack **b);
 
+void					sort_two(t_stack **a);
+void					sort_three(t_stack **a);
+void					sort_four(t_stack **a, t_stack **b);
+void					sort_five(t_stack **a, t_stack **b);
+
 size_t					get_stack_size(t_stack *stack);
 size_t					get_max_position(t_stack *stack);
+size_t					get_min_position(t_stack *stack);
 size_t					get_sqrt(size_t n);
 int						is_sorted(t_stack *stack);
 
@@ -51,7 +57,6 @@ void					push(t_stack **stack, int num, size_t index);
 void					pop(t_stack **stack);
 void					free_stack(t_stack **stack);
 void					swap(t_stack **stack);
-// t_stack *getlast(t_stack *stack);
 t_stack					*getprelast(t_stack *stack);
 void					rotate(t_stack **stack);
 void					rrotate(t_stack **stack);

@@ -16,7 +16,8 @@ MAIN_SRC=$(SRC_DIR)/main.c
 SRC=$(SRC_DIR)/push_swap_utils.c \
 		$(SRC_DIR)/args_parser.c \
 		$(SRC_DIR)/sorter.c \
-		$(SRC_DIR)/sorter_utils.c
+		$(SRC_DIR)/short_sorter.c \
+		$(SRC_DIR)/sorter_utils.c \
 
 CHECKER_SRC=$(SRC_DIR)/checker_bonus.c
 
