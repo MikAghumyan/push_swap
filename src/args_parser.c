@@ -6,7 +6,7 @@
 /*   By: maghumya <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/05 20:24:31 by maghumya          #+#    #+#             */
-/*   Updated: 2025/03/12 14:33:37 by maghumya         ###   ########.fr       */
+/*   Updated: 2025/03/19 18:40:25 by maghumya         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ char	**parse_args(int argc, char **argv, int *is_allocated)
 		return (NULL);
 	if (argc == 2)
 	{
+		if (!argv[1][0])
+			return (NULL);
 		args = ft_split(argv[1], ' ');
 		if (!args)
 			return (NULL);
@@ -69,6 +71,8 @@ void	fill_stack(char **args, int *is_allocated, t_stack **new_stack)
 		i++;
 	while (i >= 0)
 	{
+		if (!args[i][0])
+			ft_error(args, is_allocated, new_stack, NULL);
 		new_nb = ft_atoi_valid(args, i, is_allocated, new_stack);
 		if (!dup_checker(*new_stack, new_nb))
 			ft_error(args, is_allocated, new_stack, NULL);
